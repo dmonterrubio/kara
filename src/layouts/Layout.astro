@@ -1,0 +1,69 @@
+---
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+	title: string;
+	color: string
+}
+
+const { title, color } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Kara Estudio de Luz" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class={`${color} flex flex-col h-screen`}>
+		<Header />
+		<main class="flex-grow mx-16">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: "Silka-Medium";
+		src: url("/fonts/Silka-Medium.woff") format("woff");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Silkamono-Regular";
+		src: url("/fonts/Silkamono-Regular.woff2") format("woff2");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	html {
+		font-family: "Silka-Medium", system-ui, sans-serif;
+	}
+	body{
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
