@@ -7,10 +7,25 @@ import Layout from '../layouts/Layout.astro';
     <section >
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
 
-            <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contacta con nosotros</h2>
+            <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-gray-800">Contacta con nosotros</h2>
 
-            <p class="text-gray-500 text-sm text-center">Correo de contacto: <span class="text-red-400">ara.darriba@karaestudio.com</span></p>
-            <p class="text-gray-500 text-sm mb-4 text-center">Teléfono:<span class="text-red-400"> 620 97 87 62</span></p>
+            <div class="text-gray-500 text-sm text-center flex items-center place-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4e88b9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                <path d="M3 7l9 6l9 -6" />
+              </svg> 
+              <span class="text-[#4e88b9]">ara.darriba@karaestudio.com</span>
+            </div>
+            <div class="text-gray-500 text-sm mb-4 text-center flex items-center place-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4e88b9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
+                    <path d="M11 4h2" />
+                    <path d="M12 17v.01" />
+                  </svg>
+                <span class="text-[#4e88b9] items-center"> 620 97 87 62</span>
+            </div>
 
 
             <picture>
@@ -29,7 +44,7 @@ import Layout from '../layouts/Layout.astro';
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mensaje</label>
                     <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500  dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Cuéntanos..." required></textarea>
                 </div>
-                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-primary-700 sm:w-fit hover:bg-red-400 bg-red-200 focus:ring-4 focus:outline-none focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Enviar Mensaje</button>
+                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-primary-700 sm:w-fit hover:bg-[#fd31a5] bg-[#ed4ea8] focus:ring-4 focus:outline-none focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Enviar Mensaje</button>
             </form>
         </div>
       </section>
