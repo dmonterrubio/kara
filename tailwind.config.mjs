@@ -4,7 +4,6 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'home-blue': '#4B556D',
 				'proyectos': '#ef6e4b'
 			  }
 		},
