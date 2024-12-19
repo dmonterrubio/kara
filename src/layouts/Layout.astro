@@ -13,14 +13,12 @@ interface Props {
 
 const { title, description = "Kara Estudio de Luz", color, sectionName } = Astro.props;
 
-const url = document.location.href
-
 const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": title,
     "description": description,
-    "url": url || "https://www.karaestudio.com/"
+    "url": Astro.url || "https://www.karaestudio.com/"
 };
 
 ---
