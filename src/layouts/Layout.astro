@@ -7,10 +7,19 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
 	color: string;
-	sectionName?: string
+	sectionName?: string;
+	description: string
 }
 
-const { title, color, sectionName } = Astro.props;
+const { title, description = "Kara Estudio de Luz", color, sectionName } = Astro.props;
+
+const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": Astro.url || "https://www.karaestudio.com/"
+};
 
 ---
 
@@ -18,10 +27,19 @@ const { title, color, sectionName } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Kara Estudio de Luz" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={Astro.url} />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Schema.org Structured Data -->
+	
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
