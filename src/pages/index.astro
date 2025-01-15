@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Kara Estudio de Luz 💡" color='bg-slate-50' sectionName="home" description="iluminación en San Sebastián">
-    <section class="flex items-center justify-center h-full">
+    <section class="flex items-center justify-center h-full overflow-hidden">
         <video autoplay muted loop plays-inline>
             <source src="intro_video2.mp4" />
         </video>
@@ -24,5 +24,8 @@ import Layout from "../layouts/Layout.astro";
         bottom: 0;
         z-index: -1;
         max-width: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 </style>
